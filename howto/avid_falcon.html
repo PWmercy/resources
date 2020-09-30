@@ -5,8 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<meta name="author" content="Phil White">
-<title>How to: Avid Falcon</title>
+<title>How to: Avid Falcon (plugin for Pro Tools)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -440,7 +439,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>How to: Avid Falcon</h1>
+<h1>How to: Avid Falcon (plugin for Pro Tools)</h1>
 <div class="details">
 <span id="author" class="author">Phil White</span><br>
 </div>
@@ -449,14 +448,41 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <em>UVI Falcon</em> instrument plugin that comes with Pro Tools requires an extra step to set up on each user account.
-You will need to do this on each computer you log onto.  If you use the same computer, it will save your settings.</p>
+<p>How to set up UVI Falcon at home if you own Pro Tools.</p>
 </div>
+<div class="paragraph">
+<p>Go to Avid.com. Login with your username and password.</p>
+</div>
+<div class="paragraph">
+<p>Go to My Products/ View my products/ Pro Tools/ VIEW software Download Link &amp; Product Details.  Here, the last download is UVI Plug-Ins.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setup_uvi_falcon_instrument_pro_tools">Setup UVI Falcon instrument (Pro Tools)</h2>
+<div class="sectionbody">
+
 </div>
 </div>
 <div class="sect1">
 <h2 id="_adding_the_libraries">Adding the libraries</h2>
 <div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Download Falcon Avid 2.0.8 (Mac)</p>
+</li>
+<li>
+<p>Download Falcon Factory</p>
+</li>
+<li>
+<p>Download Plugsound Avid Edition (USF)</p>
+</li>
+<li>
+<p>Install Falcon Avid 2.0.8.</p>
+</li>
+</ol>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -464,60 +490,57 @@ You will need to do this on each computer you log onto.  If you use the same com
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Here is a help <a href="https://youtu.be/EG71ZvVUXQ8">video</a>.
+You will need to download The Unarchiver <a href="https://theunarchiver.com/" class="bare">https://theunarchiver.com/</a> this will unzip the Falcon Factory.rar file.  Right click on the Falcon Factory.rar file. and open with The Unarchiver.  Once the The Unarchiver extracts the file it will become Falcon Factory.ufs.
 </td>
 </tr>
 </table>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Create stereo instrument track.</p>
-</li>
-<li>
-<p>Open UVI Falcon on as a plugin insert.</p>
-</li>
-<li>
-<p>On the right side of the plugin there is a menu bar.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Click the menu bar, then <code>Macintosh HD</code><br></p>
+<div class="paragraph">
+<p>You will need to create a folder to place the sound libraries in.
+Go to Macintosh HD/Library/Application Support/</p>
+</div>
+<div class="paragraph">
+<p>In the Application Support folder create a new folder (Command Shift N) or (File New Folder) this will require the admin password of your computer.  Name the new folder UVISoundBanks</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The folder must be named exactly <em>UVISoundBanks</em> with the same letters capitalized<br>
+<br>
+Also note there is another folder in the Application Support Folder that is called <em>UVI</em>. Leave that folder alone.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Take the Falcon Factory.ufs and Plugsound_Avid_Edition.ufs files and place them in the following location on your hardrive:</p>
+</div>
+<div class="paragraph">
+<p><code>Macintosh HD/Library/Application Support/UVISoundBanks</code></p>
+</div>
+<div class="paragraph">
+<p>Login into your iLok account. <a href="http://ilok.com/" class="bare">http://ilok.com/</a></p>
+</div>
+<div class="paragraph">
+<p>You would have had to download the iLok license manager to use Pro Tools.  Log into your iLok License Manager and place your Avid Falcon AAX license onto your ilok key or authorize your computer to use falcon.</p>
+</div>
+<div class="paragraph">
+<p>Launch Pro Tools, Create an Instrument track. Load Falcon and the SoundBanks should show up automatically like this.</p>
+</div>
 <div class="paragraph thumb">
-<div class="title">Find the Libraries</div>
-<p><span class="image"><img src="../media/falcon_1.png" alt="image"></span></p>
-</div>
-</li>
-<li>
-<p>Follow the path <code>/Users/Shared/Avid/UVI</code> to locate the sound libraries for Falcon.</p>
-</li>
-<li>
-<p>In this UVI folder there are two sound libraries, <em>Falcon Factory</em> and <em>Plugsound_Avid_Edition</em>.</p>
-</li>
-<li>
-<p>Double-click each to load. (You&#8217;ll need to locate <code>Macintosh HD/User/Shared/Avid/UVI</code> twice to double-click each sound library.)</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Click the same Menu button as above and click the forward slash <code>/</code> then click the <strong class="big gray-background white">&#160;<span class="icon"><i class="fa fa-caret-right"></i></span>&#160;</strong> <strong class="big black-background white">Soundbanks</strong> triangle. It should show two libraries like this.<br></p>
-<div class="paragraph thumb">
-<div class="title">Load the Falcon Libraries</div>
-<p><span class="image"><img src="../media/falcon_2.png" alt="image"></span></p>
-</div>
-</li>
-<li>
-<p>Click each library to load its sounds.</p>
-</li>
-</ol>
+<div class="title">Load the libraries</div>
+<p>image::media/falcon_2.jpg</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-09-28 13:19:02 -0400
+Last updated 2020-09-30 15:20:20 -0400
 </div>
 </div>
 </body>
