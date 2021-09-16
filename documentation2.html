@@ -434,18 +434,50 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
 <h1>Tech Documentation</h1>
+<div class="details">
+<span id="author" class="author">Phil White</span><br>
+<span id="revnumber">version 2.0,</span>
+<span id="revdate">March 15, 2021</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_general_documentation">General Documentation</a></li>
+<li><a href="#_overview">Overview</a></li>
+<li><a href="#_recent_changes">Recent Changes</a></li>
+<li><a href="#_hardware">Hardware</a>
+<ul class="sectlevel2">
+<li><a href="#_servers">Servers</a></li>
+<li><a href="#_lab_computers">Lab Computers</a></li>
+<li><a href="#_recording_studios">Recording Studios</a></li>
+<li><a href="#_peripheral_devices">Peripheral devices</a></li>
+</ul>
+</li>
+<li><a href="#_software">Software</a>
+<ul class="sectlevel2">
+<li><a href="#_renewal_calendar">Renewal calendar</a></li>
+<li><a href="#_license_servers">License servers</a></li>
+<li><a href="#_standard_software">Standard Software</a></li>
+</ul>
+</li>
+<li><a href="#_deployment_and_maintenance">Deployment and Maintenance</a>
+<ul class="sectlevel2">
+<li><a href="#_deployment_checklists">Deployment Checklists</a></li>
+<li><a href="#_deployment_tools">Deployment tools</a></li>
+<li><a href="#_apple_updates">Apple updates</a></li>
+</ul>
+</li>
+<li><a href="#_managementreporting">Management/Reporting</a></li>
+<li><a href="#_many_serversmany_services">Many servers/many services</a></li>
+<li><a href="#_admin_resources">Admin Resources</a></li>
+</ul>
+</div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<link rel="stylesheet"  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css">
-</div>
-</div>
 <div class="sect1">
 <h2 id="_general_documentation">General Documentation</h2>
 <div class="sectionbody">
@@ -472,7 +504,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-important" title="Important"></i>
+<div class="title">Important</div>
 </td>
 <td class="content">
 Some links in this document are private and only available when on Dobbs Ferry campus.
@@ -1071,7 +1103,7 @@ Some links in this document are private and only available when on Dobbs Ferry c
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
+<div class="title">Caution</div>
 </td>
 <td class="content">
 MacOS 11 may kill this off.
@@ -1243,7 +1275,7 @@ MacOS 11 may kill this off.
 <div id="footer">
 <div id="footer-text">
 Version 2.0<br>
-Last updated 2021-09-16 11:48:44 -0400
+Last updated 2021-09-16 11:49:47 -0400
 </div>
 </div>
 </body>
