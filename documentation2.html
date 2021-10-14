@@ -486,7 +486,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p>This page is regularly updated. Last updated <strong>2021-10-07</strong></p>
+<p>This page is regularly updated. Last updated <strong>2021-10-14</strong></p>
 </div>
 </div>
 </div>
@@ -997,12 +997,34 @@ Some links in this document are private and only available when on Dobbs Ferry c
 <ul>
 <li>
 <p>Adobe Creative Cloud</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Updates
+User can update from Creative Cloud App</p>
 </li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Admin can update remotely using <a href="https://helpx.adobe.com/enterprise/using/using-remote-update-manager.html">Remote Update Manager</a></p>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>Maya</p>
 </li>
 <li>
 <p>Substance Painter</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Now part of Adobe Creative Cloud</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Marvelous Designer</p>
@@ -1095,7 +1117,192 @@ Some links in this document are private and only available when on Dobbs Ferry c
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_deployment_checklists">Deployment Checklists</h3>
-
+<div class="sect4">
+<h5 id="_servers_2">Servers</h5>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><input type="checkbox" data-item-complete="0"> OS Updates</p>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> Run Diagnostics</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_lab_macs">Lab Macs</h5>
+<div class="sect5">
+<h6 id="_all">All</h6>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><input type="checkbox" data-item-complete="0"> Wipe Drive (annual)</p>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> OS Updates</p>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> Run Diagnostics</p>
+</li>
+</ul>
+</div>
+<div class="sect6">
+<h7 id="_enrollmentinitial_setup">Enrollment/Initial Setup</h7>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><input type="checkbox" data-item-complete="0"> Auto-enroll</p>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> Add to groups</p>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> Munki</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Refresh Room number group</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> Run Network script - <a href="http://172.31.48.94:8090/Scripts">download</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_mpra">MPRA</h6>
+<div class="sect6">
+<h7 id="_pro_tools">Pro Tools</h7>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><input type="checkbox" data-item-complete="0"> Falcon Libraries</p>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> Folder</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Permissions on Libraries</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>chmod a+rx</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect6">
+<h7 id="_reason">Reason</h7>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><input type="checkbox" data-item-complete="0"> Copy Outset Script for Reason to <code>/usr/local/outset/login-once</code></p>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> Copy Reason Content to <code>/Library/Application Support/Propellerhead Software/Propellerhead Content</code></p>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> Permissions on Libraries</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>chmod a+rx</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect6">
+<h7 id="_ableton">Ableton</h7>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><input type="checkbox" data-item-complete="0"> Check Packs location</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Users' Ableton folder may need to be deleted again</p>
+</div>
+<div class="paragraph">
+<p>Focusrite</p>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_da">DA</h6>
+<div class="sect6">
+<h7 id="_zbrush">Zbrush</h7>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><input type="checkbox" data-item-complete="0"> License and permissions</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_students">Students</h5>
+<div class="sect5">
+<h6 id="_all_students">All Students</h6>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><input type="checkbox" data-item-complete="0"> Class folders</p>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> User folders</p>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> Add users to Blackboard Tech Support room</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_music_prodrec_arts_students_only">Music Prod+Rec Arts Students Only</h6>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><input type="checkbox" data-item-complete="0"> Invite new users to Scheduler</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_designanimation_students_only">Design+Animation Students Only</h6>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><input type="checkbox" data-item-complete="0"> Add new users to Adobe</p>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> Remove graduates and non-current faculty</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_deployment_tools">Deployment tools</h3>
@@ -1133,7 +1340,7 @@ Some links in this document are private and only available when on Dobbs Ferry c
 <i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
-MacOS 11 may kill this off.
+MacOS 11 killed this off.
 </td>
 </tr>
 </table>
@@ -1177,7 +1384,7 @@ MacOS 11 may kill this off.
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://munki6.digiarts.mercy">Munki Report</a></p>
+<p><a href="https://munki6.digiarts.mercy:8881/">Munki Report</a></p>
 </li>
 <li>
 <p><a href="http://license2.digiarts.mercy:8081/software">KeyServer</a></p>
@@ -1262,16 +1469,6 @@ MacOS 11 may kill this off.
 </li>
 <li>
 <p><a href="http://172.31.48.124:5000">Docker</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://172.31.48.124:8089">Margarita/Reposado</a></p>
-</li>
-<li>
-<p>Private support <a href="http://172.31.48.124:8081">web site</a></p>
-</li>
-</ul>
-</div>
 </li>
 </ul>
 </div>
@@ -1315,7 +1512,7 @@ MacOS 11 may kill this off.
 <div id="footer">
 <div id="footer-text">
 Version 2.0<br>
-Last updated 2021-10-07 10:48:45 -0400
+Last updated 2021-10-14 15:49:09 -0400
 </div>
 </div>
 </body>
