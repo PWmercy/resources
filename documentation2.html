@@ -451,8 +451,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_general_documentation">General Documentation</a></li>
 <li><a href="#_overview">Overview</a></li>
-<li><a href="#_recent_changes">Recent Changes</a></li>
+<li><a href="#_recent_changes">Recent Changes</a>
+<ul class="sectlevel2">
 <li><a href="#_studentfaculty_resource_page">Student/Faculty Resource Page</a></li>
+</ul>
+</li>
 <li><a href="#_hardware">Hardware</a>
 <ul class="sectlevel2">
 <li><a href="#_servers">Servers</a></li>
@@ -477,9 +480,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_apple_updates">Apple updates</a></li>
 </ul>
 </li>
-<li><a href="#_managementreporting">Management/Reporting</a></li>
+<li><a href="#_managementreporting">Management/Reporting</a>
+<ul class="sectlevel2">
+<li><a href="#_desktop_central">Desktop Central</a></li>
 <li><a href="#_many_serversmany_services">Many servers/many services</a></li>
 <li><a href="#_admin_resources">Admin Resources</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -490,7 +497,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p>This page is regularly updated. Last updated <strong>2022-11-21</strong></p>
+<p>This page is regularly updated. Last updated <strong>2022-11-22</strong></p>
 </div>
 </div>
 </div>
@@ -660,11 +667,8 @@ Some links in this document are private and only available on Dobbs Ferry wired 
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_studentfaculty_resource_page">Student/Faculty Resource Page</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_studentfaculty_resource_page">Student/Faculty Resource Page</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -684,6 +688,7 @@ Some links in this document are private and only available on Dobbs Ferry wired 
 </div>
 </li>
 </ul>
+</div>
 </div>
 </div>
 </div>
@@ -1594,11 +1599,137 @@ MacOS 11 killed this off.
 </li>
 </ul>
 </div>
+<div class="sect2">
+<h3 id="_desktop_central">Desktop Central</h3>
+<div class="sect3">
+<h4 id="_installing_mac_agent">Installing Mac Agent</h4>
+<div class="sect4">
+<h5 id="_manual_install">Manual Install</h5>
+<div class="paragraph">
+<p>Mac agents can be installed manually in the computers that need to be managed.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+If a previous version of  Desktop Central agent is already installed in the client computer, then uninstall it before installing the latest agent.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To install the agent, follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Login into the Mac computer as administrator and navigate to the location where the agent is downloaded.</p>
+</li>
+<li>
+<p>Extract the zip file and  locate DesktopCentral_MacAgent.pkg and serverinfo.plist file.</p>
+</li>
+<li>
+<p>Double click to install the agent. Ensure that the extracted folder contains both the files in the same location, serverinfo.plist and DesktopCentral_MacAgent.pkg</p>
+</li>
+<li>
+<p>Enter administrator&#8217;s password when prompted to complete installation.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Once the agent is installed successfully, the Mac computer will be listed in the SoM page in the Desktop Central web console.</p>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_many_serversmany_services">Many servers/many services</h2>
-<div class="sectionbody">
+<div class="sect4">
+<h5 id="_installing_mac_agent_using_ssh">Installing Mac Agent Using SSH</h5>
+<div class="paragraph">
+<p>Installing Mac agents in computers can be done easily through SSH. Using a Mac computer you can remotely connect to other computers and install the Mac agents.</p>
+</div>
+<div class="paragraph">
+<p>Follow the steps below.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Login into the Mac computer as administrator</p>
+</li>
+<li>
+<p>Copy the downloaded Mac agent</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Open the terminal</p>
+</li>
+<li>
+<p>Navigate to the location where the agent is downloaded.</p>
+</li>
+<li>
+<p>Type <code>scp DCMacAgent.zip adminusername@hostname:</code> to copy the agent to the target computer.
+where <code>adminusername</code> = administrator user name of the remote computer and <code>hostname</code> = local host name of the remote computer</p>
+</li>
+<li>
+<p>Agent is copied in the location ~/Users/adminusername in target computer</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Install the agent on the remote computer</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>To login into the target computer using SSH type <code>ssh adminusername@hostname</code></p>
+</li>
+<li>
+<p>Navigate to the location where the agent is copied, Unzip the agent zip file by typing <code>unzip -oq DCMacAgent.zip</code></p>
+</li>
+<li>
+<p>Install the agent using the command <code>sudo installer  -pkg  DesktopCentral_MacAgent.pkg  -target  /</code></p>
+</li>
+<li>
+<p>Enter the administrator password when prompted to complete agent installation.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Once the agent is installed successfully, the Mac computer will be listed in the SoM page in the Desktop Central web console.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uninstalling">Uninstalling</h4>
+<div class="paragraph">
+<p>To uninstall the agent from the managed computer, follow the steps mentioned below:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Login into the computer as administrator and open the terminal.</p>
+</li>
+<li>
+<p>Navigate to the directory <code>/Library/DesktopCentral_Agent/uninstall</code></p>
+</li>
+<li>
+<p>Type <code>sudo chmod 744 uninstall.sh</code>, and enter administrator password when prompted.</p>
+</li>
+<li>
+<p>Type the command <code>sudo ./uninstall.sh</code>, this command removes all the files except logs.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You have successfully uninstalled the agent from the managed Mac computer.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_many_serversmany_services">Many servers/many services</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1650,10 +1781,8 @@ MacOS 11 killed this off.
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_admin_resources">Admin Resources</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_admin_resources">Admin Resources</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1677,6 +1806,7 @@ MacOS 11 killed this off.
 </div>
 </div>
 </div>
+</div>
 <div id="footnotes">
 <hr>
 <div class="footnote" id="_footnotedef_1">
@@ -1689,7 +1819,7 @@ MacOS 11 killed this off.
 <div id="footer">
 <div id="footer-text">
 Version 2.0<br>
-Last updated 2022-11-21 15:04:55 -0500
+Last updated 2022-11-22 11:46:43 -0500
 </div>
 </div>
 </body>
