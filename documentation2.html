@@ -478,6 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_deployment_tools">Deployment tools</a></li>
 <li><a href="#_signing_packages">Signing packages</a></li>
 <li><a href="#_apple_updates">Apple updates</a></li>
+<li><a href="#_synology">Synology</a></li>
 </ul>
 </li>
 <li><a href="#_managementreporting">Management/Reporting</a>
@@ -1550,13 +1551,19 @@ productsign: Wrote signed product archive to /Users/sdeveloper/Downloads/munkito
 </ol>
 </div>
 </div>
+<div class="sect4">
+<h5 id="_sign_profiles_and_other_objects">Sign profiles (and other objects)</h5>
+<div class="paragraph">
+<p><code>/usr/bin/security cms -S -N "&lt;common name of certificate&gt;" -i &lt;input path to unsigned profile&gt; -o &lt;output path for signed profile&gt;</code></p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_apple_updates">Apple updates</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Reposado/Margarita</p>
+<p><span class="line-through">Reposado/Margarita</span></p>
 </li>
 </ul>
 </div>
@@ -1592,15 +1599,15 @@ MacOS 11 killed this off.
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_synology">Synology</h4>
+</div>
+<div class="sect2">
+<h3 id="_synology">Synology</h3>
 <div class="ulist">
 <ul>
 <li>
 <p>Package Center</p>
 </li>
 </ul>
-</div>
 </div>
 </div>
 </div>
@@ -1895,7 +1902,7 @@ Both use <a href="mailto:asm@mercy.edu">asm@mercy.edu</a> account
 <div id="footer">
 <div id="footer-text">
 Version 2.0<br>
-Last updated 2023-02-07 14:56:05 -0500
+Last updated 2023-02-07 15:13:07 -0500
 </div>
 </div>
 </body>
