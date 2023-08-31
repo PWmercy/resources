@@ -498,7 +498,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p>This page is regularly updated. Last updated <strong>2023-03-20</strong></p>
+<p>This page is regularly updated. Last updated <strong>2023-07-19</strong></p>
 </div>
 </div>
 </div>
@@ -884,7 +884,7 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 <p>Intel</p>
 </li>
 <li>
-<p>M1</p>
+<p>Apple Silicon</p>
 </li>
 </ul>
 </div>
@@ -1142,7 +1142,7 @@ Unique ID:</p>
 <p>Vray</p>
 </li>
 <li>
-<p><a href="https://www.pipelinefx.com">Qube</a> Render Farm</p>
+<p>[line-through]<a href="https://www.pipelinefx.com">Qube</a> Render Farm</p>
 </li>
 </ul>
 </div>
@@ -1154,8 +1154,27 @@ Unique ID:</p>
 <ul>
 <li>
 <p>Pro Tools</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Post install script removes Avid Application manager and updates ShoeTool, removing the request for admin password on first-run</p>
 </li>
 </ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+App manager installer must be marked as optional in Munki or Pro Tools will keep reinstalling the update
+</td>
+</tr>
+</table>
 </div>
 <div id="_software_reason" class="ulist">
 <ul>
@@ -1912,7 +1931,7 @@ Both use <a href="mailto:asm@mercy.edu">asm@mercy.edu</a> account
 <div id="footer">
 <div id="footer-text">
 Version 2.0<br>
-Last updated 2023-03-20 16:10:10 -0400
+Last updated 2023-07-19 09:00:55 -0400
 </div>
 </div>
 </body>
