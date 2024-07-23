@@ -472,15 +472,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_deployment_and_maintenance">Deployment and Maintenance</a>
 <ul class="sectlevel2">
-<li><a href="#_mdm">MDM</a></li>
-<li><a href="#_code">Code</a></li>
 <li><a href="#_deployment_checklists">Deployment Checklists</a></li>
 <li><a href="#_tools">Tools</a></li>
 <li><a href="#_signing_packages">Signing packages</a></li>
 <li><a href="#_apple_updates">Apple updates</a></li>
 <li><a href="#_synology">Synology</a></li>
-<li><a href="#_volume_ownership">Volume Ownership</a></li>
-<li><a href="#_loginbackground_items">Login/Background Items</a></li>
 </ul>
 </li>
 <li><a href="#_managementreporting">Management/Reporting</a>
@@ -500,7 +496,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p>This page is regularly updated. Last updated <strong>2024-06-11</strong></p>
+<p>This page is regularly updated. Last updated <strong>2024-07-23</strong></p>
 </div>
 </div>
 </div>
@@ -695,18 +691,6 @@ Some links in this document are private and only available on Dobbs Ferry wired 
 <div class="sect1">
 <h2 id="_hardware">Hardware</h2>
 <div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The University is on a 5-year replacement cycle for lab computers and faculty/staff computers
-</td>
-</tr>
-</table>
-</div>
 <div class="sect2">
 <h3 id="_servers">Servers</h3>
 <div class="sect3">
@@ -1033,22 +1017,31 @@ Unique ID:</p>
 </div>
 <div class="sect2">
 <h3 id="_license_servers">License servers</h3>
-<div class="sect3">
-<h4 id="_local">Local</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>[Ableton Live]</p>
+<p><a href="http://172.31.48.93:22352">Reason</a> (license server deprecated, see <a href="#_software_reason">Reason</a> under Software)</p>
 </li>
 <li>
-<p>[Pro Tools]</p>
+<p><a href="http://172.31.48.93:5054/home.asp">ZBrush</a></p>
+</li>
+<li>
+<p>Keyshot</p>
+</li>
+<li>
+<p><a href="http://172.31.48.94:30304/#/">VRay</a></p>
+</li>
+<li>
+<p>Musition (cloud)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Students and Faculty need a Musition Cloud account set up through Blackboard.</p>
 </li>
 </ul>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_cloud">Cloud</h4>
-
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
@@ -1078,12 +1071,9 @@ Unique ID:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://adminconsole.adobe.com/">Management Console</a></p>
+<p>Licenses and install packages managed on Adobe admin console (currently administered by pwhite&#064;mercy.edu)</p>
 <div class="ulist">
 <ul>
-<li>
-<p>Licenses and install packages managed on Adobe admin console (currently administered by pwhite&#064;mercy.edu)</p>
-</li>
 <li>
 <p>mercy.edu IDs are federated with Adobe (see <a href="https://helpx.adobe.com/enterprise/using/identity.html">Identity Overview</a>).</p>
 </li>
@@ -1127,13 +1117,6 @@ Unique ID:</p>
 </li>
 <li>
 <p>ZBrush</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Now part of Maxon suite</p>
-</li>
-</ul>
-</div>
 </li>
 </ul>
 </div>
@@ -1172,9 +1155,6 @@ Unique ID:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://my.avid.com/products">Account and downloads</a></p>
-</li>
-<li>
 <p>Post install script removes Avid Application manager and updates ShoeTool, removing the request for admin password on first-run</p>
 </li>
 </ul>
@@ -1198,28 +1178,19 @@ App manager installer must be marked as optional in Munki or Pro Tools will keep
 <ul>
 <li>
 <p>Reason</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Reason is being phased out in the labs. Only teacher stations have it set up and licensing is by log in to Reason account.
-</td>
-</tr>
-</table>
-</div>
 <div class="ulist">
 <ul>
+<li>
+<p>As of 9/2024, Reason is being installed only on Teacher stations for demonstration.</p>
+</li>
 <li>
 <p>As of Reason 12, network multi-license not available. Machines are individually authorized.</p>
 </li>
 <li>
 <p>Login to ReasonStudios online account on target machine, choose an unused license, then <em>Manage License</em>, then <em>Write License</em></p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -1239,13 +1210,6 @@ Local authorization still requires that <a href="https://www.wibu.com/us/support
 <ul>
 <li>
 <p><span class="line-through">Multi-license</span></p>
-<div class="ulist">
-<ul>
-<li>
-<p><span class="line-through">Codemeter</span></p>
-</li>
-</ul>
-</div>
 </li>
 <li>
 <p>Additional Content</p>
@@ -1261,22 +1225,14 @@ Local authorization still requires that <a href="https://www.wibu.com/us/support
 <li>
 <p>Ableton Live</p>
 </li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><a href="https://www.ableton.com/en/account/">Downloads</a></p>
-<div class="ulist">
-<ul>
 <li>
 <p>Musition</p>
 </li>
 <li>
-<p>Native Instruments Standard
-<strong>*</strong></p>
+<p>Native Instruments Komplete</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -1293,91 +1249,6 @@ Local authorization still requires that <a href="https://www.wibu.com/us/support
 <div class="sect1">
 <h2 id="_deployment_and_maintenance">Deployment and Maintenance</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_mdm">MDM</h3>
-<div class="sect4">
-<h5 id="_mosyle_fusion">Mosyle Fusion</h5>
-<div class="paragraph">
-<p>Login <a href="https://mybusiness.mosyle.com">here</a>.</p>
-</div>
-<div class="paragraph">
-<p>AD Integration</p>
-</div>
-<div class="paragraph">
-<p>Students only - Faculty and staff must be manually added to End Users within Mosyle</p>
-</div>
-<div class="paragraph">
-<p>Needs refreshing when new students added</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_code">Code</h3>
-<div class="sect4">
-<h5 id="_code_2">Code</h5>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/PWmercy/Mercy-Digital-Arts">Github</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Bash code, Documentation</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><a href="https://gist.github.com/PWmercy">Gists</a></p>
-</li>
-<li>
-<p>Applescripts</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Remote Desktop</p>
-<div class="ulist">
-<ul>
-<li>
-<p>SSH to selected device</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Visual Studio Code</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/PWmercy/Mercy-Digital-Arts/blob/315cc36bef5624127c9ec2455e0846ca9015033b/Management/update_resource_web.sh">Github
-Pages updater</a> called by Applescript "Update Resource Page" and resides on local
-machine</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>File Server management scripts</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Class Folders
-see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef5624127c9ec2455e0846ca9015033b/Class%20setup/Class%20Folders">Github</a></p>
-</li>
-<li>
-<p>Home folders
-see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef5624127c9ec2455e0846ca9015033b/Class%20setup/Home%20folders">Github</a></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_deployment_checklists">Deployment Checklists</h3>
 <div class="sect4">
@@ -1528,11 +1399,11 @@ see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef56241
 <p><i class="fa fa-square-o"></i> Profile to prevent download of additional loops</p>
 </li>
 <li>
-<p><i class="fa fa-square-o"></i> Install Loopdown script</p>
+<p><i class="fa fa-square-o"></i> Install AppleLoops script</p>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
-<p><i class="fa fa-square-o"></i> Run LoopDown script</p>
+<p><i class="fa fa-square-o"></i> Run AppleLoops script</p>
 </li>
 </ul>
 </div>
@@ -1712,28 +1583,38 @@ productsign: Wrote signed product archive to /Users/sdeveloper/Downloads/munkito
 </div>
 <div class="sect2">
 <h3 id="_apple_updates">Apple updates</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="line-through">Reposado/Margarita</span></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+MacOS 11 killed this off.
+</td>
+</tr>
+</table>
+</div>
 <div class="sect3">
 <h4 id="_loops_for_garageband_and_logic">Loops for GarageBand and Logic</h4>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/carlashley/appleLoops">Appleloops utility</a></p>
+<div class="ulist">
+<ul>
+<li>
 <p>Auto downloads Apple Sound Library to local machine or server.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/carlashley/loopdown">Loopdown utility</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Download to local machine or to server</p>
 </li>
 <li>
-<p>Download from Apple or local server</p>
-</li>
-<li>
-<p>As of 10/2021, using MacAdmins managed Python (<a href="https://github.com/macadmins/python">github link</a>) and Mac Mini 6 server run by MDS.</p>
-</li>
-<li>
-<p>Our script located <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/master/Deployment/Apple_Apps">here on Github</a></p>
+<p>As of 10/2021, using MacAdmins managed Python (<a href="https://github.com/macadmins/python">github link</a>) and Mac Mini 6 Http server run via TwoCanoes MDS.</p>
 </li>
 </ul>
 </div>
@@ -1750,31 +1631,6 @@ productsign: Wrote signed product archive to /Users/sdeveloper/Downloads/munkito
 <p>Package Center</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_volume_ownership">Volume Ownership</h3>
-<div class="paragraph">
-<p><a href="https://derflounder.wordpress.com/2023/03/10/granting-volume-owner-status-on-apple-silicon-macs/">Rich Trouton article</a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_loginbackground_items">Login/Background Items</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Login Items Plist</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>A list populated by Apple of common background items.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://support.apple.com/en-lamr/guide/deployment/depdca572563/web">Apple documentation</a></p>
-</div>
-<div class="paragraph">
-<p>located at <code>/System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Versions/A/Resources/attributions.plist</code></p>
 </div>
 </div>
 </div>
@@ -1804,11 +1660,11 @@ productsign: Wrote signed product archive to /Users/sdeveloper/Downloads/munkito
 <p>Adobe changes</p>
 </li>
 <li>
-<p><a href="http://172.31.48.93:8081/maps">KeyServer</a></p>
+<p><a href="http://172.31.48.93:8081/maps">Sassfras KeyServer</a> for Ableton Live</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Heat maps</p>
+<p>NOTE: Sassafras Allsight system provides many other capabilities including graphic Heat maps of classroom/labs</p>
 </li>
 </ul>
 </div>
@@ -1968,11 +1824,28 @@ where <code>adminusername</code> = administrator user name of the remote compute
 <p>Mac minis</p>
 </li>
 <li>
+<p>IT-managed VMs</p>
+<div class="ulist">
+<ul>
+<li>
 <p>Booked scheduling system</p>
 <div class="ulist">
 <ul>
 <li>
+<p><a href="https://booked.mercy.edu">Web access</a></p>
+</li>
+<li>
+<p><a href="https://www.bookedscheduler.com">Product support</a></p>
+<div class="ulist">
+<ul>
+<li>
 <p>Management tools</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -2055,7 +1928,7 @@ Both use <a href="mailto:asm@mercy.edu">asm@mercy.edu</a> account
 <div id="footer">
 <div id="footer-text">
 Version 2.0<br>
-Last updated 2024-06-11 14:52:08 -0400
+Last updated 2024-07-23 11:28:03 -0400
 </div>
 </div>
 </body>
