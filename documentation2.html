@@ -449,14 +449,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_general_documentation">General Documentation</a></li>
 <li><a href="#_overview">Overview</a></li>
-<li><a href="#_recent_changes">Recent Changes</a></li>
+<li><a href="#_recent_changes">Recent Changes</a>
+<ul class="sectlevel2">
 <li><a href="#_studentfaculty_resource_page">Student/Faculty Resource Page</a></li>
+</ul>
+</li>
 <li><a href="#_hardware">Hardware</a>
 <ul class="sectlevel2">
 <li><a href="#_servers">Servers</a></li>
 <li><a href="#_lab_computers">Lab Computers</a></li>
 <li><a href="#_recording_studios">Recording Studios</a></li>
 <li><a href="#_peripheral_devices">Peripheral devices</a></li>
+<li><a href="#_brightsign_digital_signage">BrightSign Digital Signage</a></li>
 </ul>
 </li>
 <li><a href="#_software">Software</a>
@@ -468,13 +472,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_deployment_and_maintenance">Deployment and Maintenance</a>
 <ul class="sectlevel2">
+<li><a href="#_mdm">MDM</a></li>
+<li><a href="#_code">Code</a></li>
 <li><a href="#_deployment_checklists">Deployment Checklists</a></li>
-<li><a href="#_deployment_tools">Deployment tools</a></li>
+<li><a href="#_tools">Tools</a></li>
+<li><a href="#_signing_packages">Signing packages</a></li>
 <li><a href="#_apple_updates">Apple updates</a></li>
 </ul>
 </li>
-<li><a href="#_managementreporting">Management/Reporting</a></li>
-<li><a href="#_many_serversmany_services">Many servers/many services</a></li>
 <li><a href="#_admin_resources">Admin Resources</a></li>
 </ul>
 </div>
@@ -491,7 +496,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p><a href="https://www.mercy.edu/academics/school-liberal-arts/department-communication-arts">Web Site</a></p>
+<p><a href="https://www.mercy.edu/academics/school-liberal-arts/department-communication-arts">Communication and the Arts on Mercy Web Site</a></p>
 </div>
 <div class="paragraph">
 <p>Author: <a href="mailto:pwhite@mercy.edu">pwhite@mercy.edu</a></p>
@@ -502,7 +507,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_overview">Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>This document began as notes for a presentation given on Feb 19, 2020</em></p>
+<p><em>This document began as notes for a presentation given to CATA faculty on Feb 19, 2020</em>.</p>
 </div>
 <div class="paragraph">
 <p>This will be expanded, updated and changed over time. Keep checking back. Suggestions welcome.</p>
@@ -514,7 +519,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Some links in this document are private and only available when on Dobbs Ferry campus.
+Some links in this document are private and only available on Dobbs Ferry wired network.
 </td>
 </tr>
 </table>
@@ -541,7 +546,7 @@ Some links in this document are private and only available when on Dobbs Ferry c
 <p>One is "Active" the other "Passive". Synchronization is continuous via a direct-connect ethernet "heartbeat" interface.</p>
 </li>
 <li>
-<p>If active device fails, the passive device takes over and service availabilty is restored within minutes.</p>
+<p>If active device fails, the passive device takes over and service availability is restored within minutes.</p>
 </li>
 </ul>
 </div>
@@ -588,9 +593,6 @@ Some links in this document are private and only available when on Dobbs Ferry c
 </li>
 <li>
 <p>Longer code in Github, code snippets and short notes in Gists.</p>
-</li>
-<li>
-<p>Using plugin these can be displayed inside a Wordpress web page</p>
 </li>
 </ul>
 </div>
@@ -656,11 +658,8 @@ Some links in this document are private and only available when on Dobbs Ferry c
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_studentfaculty_resource_page">Student/Faculty Resource Page</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_studentfaculty_resource_page">Student/Faculty Resource Page</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -683,9 +682,22 @@ Some links in this document are private and only available when on Dobbs Ferry c
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
 <h2 id="_hardware">Hardware</h2>
 <div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The University is on a 5-year replacement cycle for lab computers and faculty/staff computers
+</td>
+</tr>
+</table>
+</div>
 <div class="sect2">
 <h3 id="_servers">Servers</h3>
 <div class="sect3">
@@ -722,7 +734,7 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 </div>
 </li>
 <li>
-<p>High Availability Cluster Failover</p>
+<p>High Availability Cluster with CATA NAS 3</p>
 </li>
 <li>
 <p>Services</p>
@@ -755,7 +767,7 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 </div>
 </li>
 <li>
-<p>High Availability Cluster</p>
+<p>High Availability Cluster with CATA NAS 1</p>
 </li>
 </ul>
 </div>
@@ -807,6 +819,35 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 </div>
 </li>
 </ol>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Synology Management</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>File server
+Bash scripts
+Class Folders
+Personal folders
+Permission fix</p>
+</div>
+<div class="paragraph">
+<p>Backup
+To local disk
+To external synology</p>
+</div>
+<div class="paragraph">
+<p>Cloud sync
+Class-folders</p>
+</div>
+<div class="paragraph">
+<p>High Availability</p>
+</div>
+<div class="paragraph">
+<p>UPS</p>
 </div>
 </div>
 <div class="sect3">
@@ -874,7 +915,7 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 <p>Intel</p>
 </li>
 <li>
-<p>M1</p>
+<p>Apple Silicon</p>
 </li>
 </ul>
 </div>
@@ -886,42 +927,49 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 <h3 id="_recording_studios">Recording Studios</h3>
 <div class="sect3">
 <h4 id="_studio_a">Studio A</h4>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p>iMac Pro</p>
+<p>Mac Studio</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Acquired 6/2024</p>
 </li>
-</ol>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_studio_b">Studio B</h4>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
 <p>iMac</p>
 </li>
-</ol>
+</ul>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_studio_c">Studio C</h4>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
 <p>iMac</p>
 </li>
-</ol>
+</ul>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_studio_d">Studio D</h4>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p>Mac Mini</p>
+<p>Mac Mini (Intel)</p>
 </li>
-</ol>
+</ul>
 </div>
 </div>
 </div>
@@ -961,6 +1009,46 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 </ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_brightsign_digital_signage">BrightSign Digital Signage</h3>
+<div class="sect3">
+<h4 id="_presentation_files_location">Presentation Files Location</h4>
+<div class="paragraph">
+<p><code>catanasha.digiarts.mercy/Tech-Support/Brightsign</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_devices">Devices</h4>
+<div class="sect4">
+<h5 id="_outside_victory_hall_208_in_hallway">Outside Victory Hall 208 (in hallway)</h5>
+<div class="paragraph">
+<p>Name:	Vic-208-Hall<br>
+Description:	Victory Hall outside 208<br>
+Model:	HD222<br>
+Unique ID:	77D65H000225</p>
+</div>
+<div class="paragraph">
+<p><a href="http://172.31.90.15/index.html">Web link to device</a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_victory_hall_210_drawing_studio">Victory Hall 210 (Drawing studio)</h5>
+<div class="paragraph">
+<p>Name:<br>
+Description:	Victory Hall 210<br>
+Model:<br>
+Unique ID:</p>
+</div>
+<div class="paragraph">
+<p>As of 12/13/2022, this device is not connected to the wired network and is not reachable.</p>
+</div>
+<div class="paragraph">
+<p>Use BrightAuthor to update presentation on its microSD card.</p>
+</div>
+<hr>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -972,31 +1060,22 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 </div>
 <div class="sect2">
 <h3 id="_license_servers">License servers</h3>
+<div class="sect3">
+<h4 id="_local">Local</h4>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="http://172.31.48.93:22352">Reason</a></p>
+<p>[Ableton Live]</p>
 </li>
 <li>
-<p><a href="http://172.31.48.93:5054/home.asp">ZBrush</a></p>
-</li>
-<li>
-<p>Keyshot</p>
-</li>
-<li>
-<p><a href="http://172.31.48.94:30304/#/">VRay</a></p>
-</li>
-<li>
-<p>Musition (cloud)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Students and Faculty need a Musition Cloud account set up through Blackboard.</p>
+<p>[Pro Tools]</p>
 </li>
 </ul>
 </div>
-</li>
-</ul>
+</div>
+<div class="sect3">
+<h4 id="_cloud">Cloud</h4>
+
 </div>
 </div>
 <div class="sect2">
@@ -1006,7 +1085,7 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 <div class="ulist">
 <ul>
 <li>
-<p>Microsoft Suite</p>
+<p>Microsoft Suite (also see <a href="#_deploy_mau">Microsoft Autoupdate</a>)</p>
 </li>
 <li>
 <p>Standard apps from Apple App Store</p>
@@ -1026,14 +1105,30 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 <div class="ulist">
 <ul>
 <li>
+<p><a href="https://adminconsole.adobe.com/">Management Console</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Licenses and install packages managed on Adobe admin console (currently administered by pwhite&#064;mercy.edu)</p>
+</li>
+<li>
+<p>mercy.edu IDs are federated with Adobe (see <a href="https://helpx.adobe.com/enterprise/using/identity.html">Identity Overview</a>).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
 <p>Updates</p>
 <div class="ulist">
 <ul>
 <li>
-<p>User can update from Creative Cloud App</p>
+<p>User can update from Creative Cloud App (this is an Adobe pkg setting)</p>
 </li>
 <li>
 <p>Admin can update remotely using <a href="https://helpx.adobe.com/enterprise/using/using-remote-update-manager.html">Remote Update Manager</a></p>
+</li>
+<li>
+<p>Admin can remove apps from command line using <a href="https://helpx.adobe.com/enterprise/using/uninstall-creative-cloud-products.html">Adobe uninstall tool</a></p>
 </li>
 </ul>
 </div>
@@ -1059,6 +1154,13 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 </li>
 <li>
 <p>ZBrush</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Now part of Maxon suite</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -1082,7 +1184,7 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 <p>Vray</p>
 </li>
 <li>
-<p><a href="https://www.pipelinefx.com">Qube</a> Render Farm</p>
+<p><strong class="line-through"><a href="https://www.pipelinefx.com">Qube</a> Render Farm</strong></p>
 </li>
 </ul>
 </div>
@@ -1094,20 +1196,83 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 <ul>
 <li>
 <p>Pro Tools</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://my.avid.com/products">Account and downloads</a></p>
 </li>
 <li>
-<p>Reason</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Multi-license</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Codemeter</p>
+<p>Post install script removes Avid Application manager and updates ShoeTool, removing the request for admin password on first-run</p>
 </li>
 </ul>
 </div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+App manager installer must be marked as optional in Munki or Pro Tools will keep reinstalling the update
+</td>
+</tr>
+</table>
+</div>
+<div id="_software_reason" class="ulist">
+<ul>
+<li>
+<p>Reason
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Reason is being phased out in the labs. Only teacher stations have it set up and licensing is by log in to Reason account.
+</td>
+</tr>
+</table>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>As of 9/2024, Reason is being installed only on Teacher stations for demonstration.
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes</p>
+</li>
+<li>
+<p>As of Reason 12, network multi-license not available. Machines are individually authorized.</p>
+</li>
+<li>
+<p>Login to ReasonStudios online account on target machine, choose an unused license, then <em>Manage License</em>, then <em>Write License</em></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Local authorization still requires that <a href="https://www.wibu.com/us/support/user/downloads-user-software.html"><strong class="green">CodeMeter</strong></a> be installed.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="line-through">Multi-license</span></p>
 </li>
 <li>
 <p>Additional Content</p>
@@ -1115,24 +1280,47 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 <ul>
 <li>
 <p>Script for relocating content</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>Logic Pro</p>
 </li>
 <li>
-<p>Ableton Live</p>
+<p>Ableton Live
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream</p>
 </li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://www.ableton.com/en/account/">Downloads</a></p>
+<div class="ulist">
+<ul>
 <li>
 <p>Musition</p>
 </li>
 <li>
-<p>Native Instruments Komplete</p>
+<p>Native Instruments Standard
+<strong>*</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Musition</p>
+</li>
+<li>
+<p>Native Instruments Komplete
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1150,6 +1338,91 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 <div class="sect1">
 <h2 id="_deployment_and_maintenance">Deployment and Maintenance</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_mdm">MDM</h3>
+<div class="sect4">
+<h5 id="_mosyle_fusion">Mosyle Fusion</h5>
+<div class="paragraph">
+<p>Login <a href="https://mybusiness.mosyle.com">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>AD Integration</p>
+</div>
+<div class="paragraph">
+<p>Students only - Faculty and staff must be manually added to End Users within Mosyle</p>
+</div>
+<div class="paragraph">
+<p>Needs refreshing when new students added</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_code">Code</h3>
+<div class="sect4">
+<h5 id="_code_2">Code</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/PWmercy/Mercy-Digital-Arts">Github</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bash code, Documentation</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://gist.github.com/PWmercy">Gists</a></p>
+</li>
+<li>
+<p>Applescripts</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Remote Desktop</p>
+<div class="ulist">
+<ul>
+<li>
+<p>SSH to selected device</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Visual Studio Code</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/PWmercy/Mercy-Digital-Arts/blob/315cc36bef5624127c9ec2455e0846ca9015033b/Management/update_resource_web.sh">Github
+Pages updater</a> called by Applescript "Update Resource Page" and resides on local
+machine</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>File Server management scripts</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Class Folders
+see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef5624127c9ec2455e0846ca9015033b/Class%20setup/Class%20Folders">Github</a></p>
+</li>
+<li>
+<p>Home folders
+see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef5624127c9ec2455e0846ca9015033b/Class%20setup/Home%20folders">Github</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <div class="sect2">
 <h3 id="_deployment_checklists">Deployment Checklists</h3>
 <div class="sect4">
@@ -1190,14 +1463,14 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 <p><input type="checkbox" data-item-complete="0"> Auto-enroll</p>
 </li>
 <li>
-<p><input type="checkbox" data-item-complete="0"> Add to groups</p>
+<p>Add to groups in MDM</p>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
-<p><i class="fa fa-square-o"></i> Munki</p>
+<p><input type="checkbox" data-item-complete="0"> Munki profile groups</p>
 </li>
 <li>
-<p><i class="fa fa-square-o"></i> Refresh Room number group</p>
+<p><input type="checkbox" data-item-complete="0"> Refresh Room number group</p>
 </li>
 </ul>
 </div>
@@ -1216,18 +1489,18 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
-<p><input type="checkbox" data-item-complete="0"> Falcon Libraries</p>
+<p><input type="checkbox" data-item-complete="0"> <span class="line-through">Falcon Libraries</span></p>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
-<p><i class="fa fa-square-o"></i> Folder</p>
+<p><i class="fa fa-square-o"></i> Copy to folder <code>/Library/Application Support/UVISoundBanks/</code></p>
 </li>
 <li>
 <p><i class="fa fa-square-o"></i> Permissions on Libraries</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>chmod a+rx</code></p>
+<p><code>chmod -R a+rx</code></p>
 </li>
 </ul>
 </div>
@@ -1243,7 +1516,7 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
-<p><input type="checkbox" data-item-complete="0"> Copy Outset Script for Reason to <code>/usr/local/outset/login-once</code></p>
+<p><input type="checkbox" data-item-complete="0"> Copy <a href="https://github.com/PWmercy/Mercy-Digital-Arts/blob/de8098ca6d7bdc65c41e5fec80d5a2ad101c3a5f/Deployment/Reason/Reason11extras.sh">Outset Script</a> for Reason to <code>/usr/local/outset/login-once</code></p>
 </li>
 <li>
 <p><input type="checkbox" data-item-complete="0"> Copy Reason Content to <code>/Library/Application Support/Propellerhead Software/Propellerhead Content</code></p>
@@ -1285,6 +1558,26 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 <ul class="checklist">
 <li>
 <p><i class="fa fa-square-o"></i> First-run Focusrite Control to update firmware and get out of demo mode</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect6">
+<h7 id="_logic">Logic</h7>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> Profile to prevent download of additional loops</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Install Loopdown script</p>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> Run LoopDown script</p>
 </li>
 </ul>
 </div>
@@ -1351,7 +1644,7 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 </div>
 </div>
 <div class="sect2">
-<h3 id="_deployment_tools">Deployment tools</h3>
+<h3 id="_tools">Tools</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1368,57 +1661,151 @@ CATA NAS 1 and 3 are connected as a High Availability Cluster
 </div>
 </li>
 <li>
+<p><a href="https://github.com/chilcote/outset/wiki">outset</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>run scripts on login, on-demand, etc.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
 <p><a href="https://eclecticlight.co/lockrattler-systhist/">Silnite</a></p>
 </li>
 <li>
 <p><a href="https://github.com/scriptingosx/diskspace">diskspace</a></p>
 </li>
+<li>
+<p>Microsoft</p>
+<div id="_deploy_mau" class="ulist">
+<ul>
+<li>
+<p><a href="https://www.kevinmcox.com/2021/10/microsoft-now-provides-curated-deferral-channels-for-autoupdate/">Microsoft Autoupdate profile settings</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Custom deferrals, etc.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 </ul>
 </div>
 </div>
 <div class="sect2">
+<h3 id="_signing_packages">Signing packages</h3>
+<div class="sect4">
+<h5 id="_getting_started">Getting started</h5>
+<div class="paragraph">
+<p>In order to sign macOS packages, you will need an appropriate certificate (such as a TLS/SSL certificate with signing usage) that is verifiable on the client. It is common to use a “Developer ID Installer” certificate for this purpose, obtained from an Apple Developer account, though third party certificates that meet these requirements are also acceptable. If you don’t have a certificate already and wish to use an Apple Developer account for this purpose, you can start the signup process on Apple’s website.</p>
+</div>
+<div class="paragraph">
+<p>If using an Apple Developer account, certificates can be generated by linking your Developer account to Xcode and exporting the certificate file from Xcode, or you can log in to your Apple Developer account online and download the certificate through a web browser.</p>
+</div>
+<div class="paragraph">
+<p>When creating the certificate, be sure to select the certificate type as a “Developer ID Installer” certificate. Verify that it is saved to your macOS Keychain.</p>
+</div>
+<div class="paragraph">
+<p>Once you have your certificate, there are a few different ways to sign the macOS PKG.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_signing_pkgs_with_terminal_and_command_line">Signing PKGs with Terminal and Command Line</h5>
+<div class="paragraph">
+<p>For this example, we will use the <code>productsign</code> command.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open Keychain Access within macOS and locate the certificate. If using an Apple certificate, the name of the certificate should start with “Developer ID Installer:”, followed by your Apple Developer account name, and ending with some serial number in parenthesis – take note of this information.</p>
+</li>
+<li>
+<p>Open Terminal. The command to sign the package should look similar to this:<br></p>
+<div class="paragraph">
+<p><code>productsign --sign "Developer ID Installer: Your Developer Name (1A2B3C4D5E)" ~/Desktop/example.pkg ~/Desktop/signed-example.pkg</code><br></p>
+</div>
+<div class="paragraph">
+<p>The value in quotes following the “–sign” tag should be the Common Name of your certificate. The first argument (‘~/Desktop/example.pkg’) is the current location on your computer of the unsigned package. The second argument (‘~/Desktop/signed-example.pkg’) is the destination that you want to save your signed package.</p>
+</div>
+</li>
+<li>
+<p>Run the command. If it is successful, you should see something similar to the following printed out in Terminal:<br></p>
+<div class="paragraph">
+<p><code>productsign: using timestamp authority for signature
+productsign: signing product with identity "Developer ID Installer: Your Developer Name (1A2B3C4D5E)" from keychain /Users/sdeveloper/Library/Keychains/login.keychain-db
+productsign: adding certificate "Developer ID Certification Authority"
+productsign: adding certificate "Apple Root CA"
+productsign: Wrote signed product archive to /Users/sdeveloper/Downloads/munkitools_signed-3.2.0.3476.pkg</code></p>
+</div>
+</li>
+<li>
+<p>Verify that the signed package is located at the destination you specified.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_sign_profiles_and_other_objects">Sign profiles (and other objects)</h5>
+<div class="paragraph">
+<p><code>/usr/bin/security cms -S -N "&lt;common name of certificate&gt;" -i &lt;input path to unsigned profile&gt; -o &lt;output path for signed profile&gt;</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_apple_updates">Apple updates</h3>
+<div class="sect3">
+<h4 id="_loops_for_garageband_and_logic">Loops for GarageBand and Logic</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>Reposado/Margarita</p>
+<p><a href="https://github.com/carlashley/loopdown">Loopdown utility</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Auto downloads Apple Sound Library to local machine or server.</p>
 </li>
 </ul>
 </div>
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-MacOS 11 killed this off.
-</td>
-</tr>
-</table>
+</li>
+</ul>
 </div>
-<div class="sect3">
-<h4 id="_loops_for_garageband_and_logic">Loops for GarageBand and Logic</h4>
 <div class="paragraph">
-<p>Auto downloads Apple Sound Library to local machine or server.</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream
+* <a href="https://github.com/carlashley/loopdown">Loopdown utility</a></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://github.com/carlashley/appleLoops">Appleloops utility</a></p>
-<div class="ulist">
-<ul>
+<p>Download to local machine or to server</p>
+</li>
+<li>
+<p>Download from Apple or local server</p>
+</li>
 <li>
 <p>As of 10/2021, using MacAdmins managed Python (<a href="https://github.com/macadmins/python">github link</a>) and Mac Mini 6 server run by MDS.</p>
 </li>
 </ul>
 </div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>As of 10/2021, using MacAdmins managed Python (<a href="https://github.com/macadmins/python">github link</a>) and Mac Mini 6 Http server run via TwoCanoes MDS.
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes</p>
+</li>
+<li>
+<p>Our script located <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/master/Deployment/Apple_Apps">here on Github</a></p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>=== Synology</p>
 </div>
-<div class="sect3">
-<h4 id="_synology">Synology</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1426,13 +1813,34 @@ MacOS 11 killed this off.
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>=== Volume Ownership</p>
 </div>
+<div class="paragraph">
+<p><a href="https://derflounder.wordpress.com/2023/03/10/granting-volume-owner-status-on-apple-silicon-macs/">Rich Trouton article</a></p>
 </div>
+<div class="paragraph">
+<p>=== Login/Background Items</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>Login Items Plist</p>
+</li>
+</ul>
 </div>
-<div class="sect1">
-<h2 id="_managementreporting">Management/Reporting</h2>
-<div class="sectionbody">
+<div class="paragraph">
+<p>A list populated by Apple of common background items.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://support.apple.com/en-lamr/guide/deployment/depdca572563/web">Apple documentation</a></p>
+</div>
+<div class="paragraph">
+<p>located at <code>/System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Versions/A/Resources/attributions.plist</code></p>
+</div>
+<div class="paragraph">
+<p>== Management/Reporting</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -1455,11 +1863,11 @@ MacOS 11 killed this off.
 <p>Adobe changes</p>
 </li>
 <li>
-<p><a href="http://172.31.48.93:8081/maps">KeyServer</a></p>
+<p><a href="http://172.31.48.93:8081/maps">Sassfras KeyServer</a> for Ableton Live</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Heat maps</p>
+<p>NOTE: Sassafras Allsight system provides many other capabilities including graphic Heat maps of classroom/labs</p>
 </li>
 </ul>
 </div>
@@ -1469,49 +1877,168 @@ MacOS 11 killed this off.
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>=== Desktop Central</p>
 </div>
+<div class="paragraph">
+<p>## Installing Mac Agent</p>
 </div>
-<div class="sect1">
-<h2 id="_many_serversmany_services">Many servers/many services</h2>
-<div class="sectionbody">
+<div class="paragraph">
+<p><mark>#</mark> Manual Install</p>
+</div>
+<div class="paragraph">
+<p>Mac agents can be installed manually in the computers that need to be managed.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+If a previous version of  Desktop Central agent is already installed in the client computer, then uninstall it before installing the latest agent.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To install the agent, follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Login into the Mac computer as administrator and navigate to the location where the agent is downloaded.</p>
+</li>
+<li>
+<p>Extract the zip file and  locate DesktopCentral_MacAgent.pkg and serverinfo.plist file.</p>
+</li>
+<li>
+<p>Double click to install the agent. Ensure that the extracted folder contains both the files in the same location, serverinfo.plist and DesktopCentral_MacAgent.pkg</p>
+</li>
+<li>
+<p>Enter administrator&#8217;s password when prompted to complete installation.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Once the agent is installed successfully, the Mac computer will be listed in the SoM page in the Desktop Central web console.</p>
+</div>
+<div class="paragraph">
+<p><mark>#</mark> Installing Mac Agent Using SSH</p>
+</div>
+<div class="paragraph">
+<p>Installing Mac agents in computers can be done easily through SSH. Using a Mac computer you can remotely connect to other computers and install the Mac agents.</p>
+</div>
+<div class="paragraph">
+<p>Follow the steps below.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Login into the Mac computer as administrator</p>
+</li>
+<li>
+<p>Copy the downloaded Mac agent</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Open the terminal</p>
+</li>
+<li>
+<p>Navigate to the location where the agent is downloaded.</p>
+</li>
+<li>
+<p>Type <code>scp DCMacAgent.zip adminusername@hostname:</code> to copy the agent to the target computer.
+where <code>adminusername</code> = administrator user name of the remote computer and <code>hostname</code> = local host name of the remote computer</p>
+</li>
+<li>
+<p>Agent is copied in the location ~/Users/adminusername in target computer</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Install the agent on the remote computer</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>To login into the target computer using SSH type <code>ssh adminusername@hostname</code></p>
+</li>
+<li>
+<p>Navigate to the location where the agent is copied, Unzip the agent zip file by typing <code>unzip -oq DCMacAgent.zip</code></p>
+</li>
+<li>
+<p>Install the agent using the command <code>sudo installer  -pkg  DesktopCentral_MacAgent.pkg  -target  /</code></p>
+</li>
+<li>
+<p>Enter the administrator password when prompted to complete agent installation.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Once the agent is installed successfully, the Mac computer will be listed in the SoM page in the Desktop Central web console.</p>
+</div>
+<div class="paragraph">
+<p>## Uninstalling</p>
+</div>
+<div class="paragraph">
+<p>To uninstall the agent from the managed computer, follow the steps mentioned below:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Login into the computer as administrator and open the terminal.</p>
+</li>
+<li>
+<p>Navigate to the directory <code>/Library/DesktopCentral_Agent/uninstall</code></p>
+</li>
+<li>
+<p>Type <code>sudo chmod 744 uninstall.sh</code>, and enter administrator password when prompted.</p>
+</li>
+<li>
+<p>Type the command <code>sudo ./uninstall.sh</code>, this command removes all the files except logs.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You have successfully uninstalled the agent from the managed Mac computer.</p>
+</div>
+<div class="paragraph">
+<p>== Many servers/many services
+<strong> Synology
+</strong>* Private DNS
+<strong> Docker
+</strong> Mac minis
+<strong>*</strong></p>
+</div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Synology</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Private DNS</p>
+<p>Booked scheduling system</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>Docker</p>
-</li>
-<li>
-<p>Mac minis</p>
-</li>
+</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>IT-managed VMs</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Booked scheduling system</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://booked.mercy.edu">Web access</a></p>
-</li>
-<li>
-<p><a href="https://www.bookedscheduler.com">Product support</a></p>
+<p>Security Cameras
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes</p>
 <div class="ulist">
 <ul>
 <li>
 <p>Management tools</p>
-</li>
-</ul>
-</div>
 </li>
 </ul>
 </div>
@@ -1526,9 +2053,40 @@ MacOS 11 killed this off.
 </div>
 </div>
 </div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_admin_resources">Admin Resources</h2>
 <div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Apple</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://school.apple.com">Apple School Manager</a></p>
+</li>
+<li>
+<p><a href="https://appleseed.apple.com/sp/welcome">Apple Software Customer Seed</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Both use <a href="mailto:asm@mercy.edu">asm@mercy.edu</a> account
+</td>
+</tr>
+</table>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -1549,6 +2107,24 @@ MacOS 11 killed this off.
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream
+* <a href="https://www.production-expert.com/production-expert-1/macos-ventura-compatibility-the-ultimate-pro-audio-guide">Ventura Compatibility (2024)</a></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.production-expert.com/pro-tools-resources-1">Pro Tools Resources</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1564,7 +2140,7 @@ MacOS 11 killed this off.
 <div id="footer">
 <div id="footer-text">
 Version 2.0<br>
-Last updated 2024-09-04 17:29:34 -0400
+Last updated 2024-09-04 17:40:03 -0400
 </div>
 </div>
 </body>
