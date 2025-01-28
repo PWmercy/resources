@@ -460,32 +460,76 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_mac_mini_servers">Mac Mini servers</a></li>
 <li><a href="#_lab_computers">Lab Computers</a></li>
 <li><a href="#_recording_studios">Recording Studios</a></li>
+</ul>
+</li>
+<li><a href="#_studio_a">Studio A</a></li>
+<li><a href="#_studio_b">Studio B</a></li>
+<li><a href="#_studio_c">Studio C</a></li>
+<li><a href="#_studio_d">Studio D</a></li>
 <li><a href="#_peripheral_devices">Peripheral devices</a></li>
-<li><a href="#_brightsign_digital_signage">BrightSign Digital Signage</a></li>
+<li><a href="#_brightsign_digital_signage">BrightSign Digital Signage</a>
+<ul class="sectlevel2">
+<li><a href="#_presentation_files_location">Presentation Files Location</a></li>
+<li><a href="#_devices">Devices</a></li>
 </ul>
 </li>
 <li><a href="#_software">Software</a>
-<ul class="sectlevel2">
+<ul class="sectlevel1">
 <li><a href="#_renewal_calendar">Renewal calendar</a></li>
-<li><a href="#_license_servers">License servers</a></li>
-<li><a href="#_standard_software">Standard Software</a></li>
+<li><a href="#_license_servers">License servers</a>
+<ul class="sectlevel2">
+<li><a href="#_local">Local</a></li>
+<li><a href="#_cloud">Cloud</a></li>
+</ul>
+</li>
+<li><a href="#_standard_software">Standard Software</a>
+<ul class="sectlevel2">
+<li><a href="#_for_all">For All</a></li>
+<li><a href="#_for_designanimation">For Design+Animation</a></li>
+<li><a href="#_for_music_productionrecording_arts">For Music Production+Recording Arts</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_deployment_and_maintenance">Deployment and Maintenance</a>
-<ul class="sectlevel2">
-<li><a href="#_mdm">MDM</a></li>
-<li><a href="#_code">Code</a></li>
-<li><a href="#_deployment_checklists">Deployment Checklists</a></li>
+<ul class="sectlevel1">
+<li><a href="#_mdm">MDM</a>
+<ul class="sectlevel3">
+<li><a href="#_mosyle_fusion">Mosyle Fusion</a></li>
+</ul>
+</li>
+<li><a href="#_code">Code</a>
+<ul class="sectlevel3">
+<li><a href="#_code_2">Code</a></li>
+</ul>
+</li>
+<li><a href="#_deployment_checklists">Deployment Checklists</a>
+<ul class="sectlevel3">
+<li><a href="#_servers_2">Servers</a></li>
+<li><a href="#_lab_macs">Lab Macs</a></li>
+<li><a href="#_students">Students</a></li>
+</ul>
+</li>
 <li><a href="#_tools">Tools</a></li>
-<li><a href="#_signing_packages">Signing packages</a></li>
-<li><a href="#_apple_updates">Apple updates</a></li>
+<li><a href="#_signing_packages">Signing packages</a>
+<ul class="sectlevel3">
+<li><a href="#_getting_started">Getting started</a></li>
+<li><a href="#_signing_pkgs_with_terminal_and_command_line">Signing PKGs with Terminal and Command Line</a></li>
+<li><a href="#_sign_profiles_and_other_objects">Sign profiles (and other objects)</a></li>
+</ul>
+</li>
+<li><a href="#_apple_updates">Apple updates</a>
+<ul class="sectlevel2">
+<li><a href="#_loops_etc_for_garageband_and_logic">Loops, etc. for GarageBand and Logic</a></li>
+</ul>
+</li>
 <li><a href="#_synology">Synology</a></li>
 <li><a href="#_volume_ownership">Volume Ownership</a></li>
 <li><a href="#_loginbackground_items">Login/Background Items</a></li>
 </ul>
 </li>
 <li><a href="#_managementreporting">Management/Reporting</a>
-<ul class="sectlevel2">
+<ul class="sectlevel1">
 <li><a href="#_desktop_central">Desktop Central</a></li>
 </ul>
 </li>
@@ -502,7 +546,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p>This page is regularly updated. Last updated <strong>2025-01-07</strong></p>
+<p>This page is regularly updated. Last updated <strong>2025-01-24</strong></p>
 </div>
 </div>
 </div>
@@ -1027,10 +1071,55 @@ CATA NAS 1 and 3 are identical models and are connected as a High Availability C
 </li>
 <li>
 <p>M1</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Displaylink</p>
 </li>
 </ul>
 </div>
 </li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Because the M1 iMacs can only support 2 displays, we acquired a DisplayLink compatible hub to accommodate the Wacom, Ektron (projector) and main display.
+This requires <a href="https://www.synaptics.com/products/displaylink-graphics/downloads">driver</a>
+software.</p>
+</div>
+<div class="paragraph">
+<p>In addition, we use <a href="https://github.com/jakehilborn/displayplacer">displayplacer</a> to arrange displays.
+An Applescript was written to call this on startup and as needed.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Using in Victory-208 for Instructor station to allow 3 monitor on iMac M1</p>
+</li>
+<li>
+<p>Set to run on Login</p>
+</li>
+<li>
+<p>Applescript on Desktop to run as needed</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+As of 1/2025, this was not functioning because DisplayPlacer is very sensitive to any cables being moved or disconnected. Wacom tablet has been disconnected for now.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>Mac Minis</p>
 <div class="ulist">
@@ -1049,8 +1138,13 @@ CATA NAS 1 and 3 are identical models and are connected as a High Availability C
 </div>
 <div class="sect2">
 <h3 id="_recording_studios">Recording Studios</h3>
-<div class="sect3">
-<h4 id="_studio_a">Studio A</h4>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_studio_a">Studio A</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -1066,8 +1160,10 @@ CATA NAS 1 and 3 are identical models and are connected as a High Availability C
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_studio_b">Studio B</h4>
+</div>
+<div class="sect1">
+<h2 id="_studio_b">Studio B</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -1076,8 +1172,10 @@ CATA NAS 1 and 3 are identical models and are connected as a High Availability C
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_studio_c">Studio C</h4>
+</div>
+<div class="sect1">
+<h2 id="_studio_c">Studio C</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -1086,8 +1184,10 @@ CATA NAS 1 and 3 are identical models and are connected as a High Availability C
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_studio_d">Studio D</h4>
+</div>
+<div class="sect1">
+<h2 id="_studio_d">Studio D</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -1097,8 +1197,9 @@ CATA NAS 1 and 3 are identical models and are connected as a High Availability C
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_peripheral_devices">Peripheral devices</h3>
+<div class="sect1">
+<h2 id="_peripheral_devices">Peripheral devices</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -1176,18 +1277,20 @@ The Xerox 7760 does <em>not</em> have a current driver for MacOS - it is running
 </ul>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_brightsign_digital_signage">BrightSign Digital Signage</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_brightsign_digital_signage">BrightSign Digital Signage</h3>
-<div class="sect3">
-<h4 id="_presentation_files_location">Presentation Files Location</h4>
+<h3 id="_presentation_files_location">Presentation Files Location</h3>
 <div class="paragraph">
 <p><code>catanasha.digiarts.mercy/Tech-Support/Brightsign</code></p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_devices">Devices</h3>
 <div class="sect3">
-<h4 id="_devices">Devices</h4>
-<div class="sect4">
-<h5 id="_outside_victory_hall_208_in_hallway">Outside Victory Hall 208 (in hallway)</h5>
+<h4 id="_outside_victory_hall_208_in_hallway">Outside Victory Hall 208 (in hallway)</h4>
 <div class="paragraph">
 <p>Name:	Vic-208-Hall<br>
 Description:	Victory Hall outside 208<br>
@@ -1198,8 +1301,8 @@ Unique ID:	77D65H000225</p>
 <p><a href="http://172.31.90.15/index.html">Web link to device</a></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_victory_hall_210_drawing_studio">Victory Hall 210 (Drawing studio)</h5>
+<div class="sect3">
+<h4 id="_victory_hall_210_drawing_studio">Victory Hall 210 (Drawing studio)</h4>
 <div class="paragraph">
 <p>Name:<br>
 Description:	Victory Hall 210<br>
@@ -1217,12 +1320,10 @@ Unique ID:</p>
 </div>
 </div>
 </div>
-</div>
+<h1 id="_software" class="sect0">Software</h1>
 <div class="sect1">
-<h2 id="_software">Software</h2>
+<h2 id="_renewal_calendar">Renewal calendar</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_renewal_calendar">Renewal calendar</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1238,10 +1339,12 @@ Unique ID:</p>
 </ul>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_license_servers">License servers</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_license_servers">License servers</h3>
-<div class="sect3">
-<h4 id="_local">Local</h4>
+<h3 id="_local">Local</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1338,15 +1441,17 @@ The steps above do <em>not</em> require you to log in to iLok account.
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_cloud">Cloud</h4>
+<div class="sect2">
+<h3 id="_cloud">Cloud</h3>
 
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_standard_software">Standard Software</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_standard_software">Standard Software</h3>
-<div class="sect3">
-<h4 id="_for_all">For All</h4>
+<h3 id="_for_all">For All</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1361,8 +1466,8 @@ The steps above do <em>not</em> require you to log in to iLok account.
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_for_designanimation">For Design+Animation</h4>
+<div class="sect2">
+<h3 id="_for_designanimation">For Design+Animation</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1456,8 +1561,8 @@ administered by pwhite&#064;mercy.edu)</p>
 </div>
 <hr>
 </div>
-<div class="sect3">
-<h4 id="_for_music_productionrecording_arts">For Music Production+Recording Arts</h4>
+<div class="sect2">
+<h3 id="_for_music_productionrecording_arts">For Music Production+Recording Arts</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1576,14 +1681,12 @@ Local authorization still requires that <a href="https://www.wibu.com/us/support
 </div>
 </div>
 </div>
-</div>
+<h1 id="_deployment_and_maintenance" class="sect0">Deployment and Maintenance</h1>
 <div class="sect1">
-<h2 id="_deployment_and_maintenance">Deployment and Maintenance</h2>
+<h2 id="_mdm">MDM</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_mdm">MDM</h3>
-<div class="sect4">
-<h5 id="_mosyle_fusion">Mosyle Fusion</h5>
+<div class="sect3">
+<h4 id="_mosyle_fusion">Mosyle Fusion</h4>
 <div class="paragraph">
 <p>Login <a href="https://mybusiness.mosyle.com">here</a>.</p>
 </div>
@@ -1598,10 +1701,12 @@ Local authorization still requires that <a href="https://www.wibu.com/us/support
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_code">Code</h3>
-<div class="sect4">
-<h5 id="_code_2">Code</h5>
+</div>
+<div class="sect1">
+<h2 id="_code">Code</h2>
+<div class="sectionbody">
+<div class="sect3">
+<h4 id="_code_2">Code</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1665,10 +1770,12 @@ see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef56241
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_deployment_checklists">Deployment Checklists</h3>
-<div class="sect4">
-<h5 id="_servers_2">Servers</h5>
+</div>
+<div class="sect1">
+<h2 id="_deployment_checklists">Deployment Checklists</h2>
+<div class="sectionbody">
+<div class="sect3">
+<h4 id="_servers_2">Servers</h4>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -1680,10 +1787,10 @@ see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef56241
 </ul>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_lab_macs">Lab Macs</h4>
 <div class="sect4">
-<h5 id="_lab_macs">Lab Macs</h5>
-<div class="sect5">
-<h6 id="_all">All</h6>
+<h5 id="_all">All</h5>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -1697,8 +1804,8 @@ see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef56241
 </li>
 </ul>
 </div>
-<div class="sect6">
-<h7 id="_enrollmentinitial_setup">Enrollment/Initial Setup</h7>
+<div class="sect5">
+<h6 id="_enrollmentinitial_setup">Enrollment/Initial Setup</h6>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -1724,10 +1831,10 @@ see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef56241
 </div>
 </div>
 </div>
+<div class="sect4">
+<h5 id="_mpra">MPRA</h5>
 <div class="sect5">
-<h6 id="_mpra">MPRA</h6>
-<div class="sect6">
-<h7 id="_pro_tools">Pro Tools</h7>
+<h6 id="_pro_tools">Pro Tools</h6>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -1753,8 +1860,8 @@ see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef56241
 </ul>
 </div>
 </div>
-<div class="sect6">
-<h7 id="_reason">Reason</h7>
+<div class="sect5">
+<h6 id="_reason">Reason</h6>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -1780,8 +1887,8 @@ see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef56241
 </ul>
 </div>
 </div>
-<div class="sect6">
-<h7 id="_ableton">Ableton</h7>
+<div class="sect5">
+<h6 id="_ableton">Ableton</h6>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -1807,8 +1914,8 @@ see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef56241
 </ul>
 </div>
 </div>
-<div class="sect6">
-<h7 id="_logic">Logic</h7>
+<div class="sect5">
+<h6 id="_logic">Logic</h6>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -1828,10 +1935,10 @@ see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef56241
 </div>
 </div>
 </div>
+<div class="sect4">
+<h5 id="_da">DA</h5>
 <div class="sect5">
-<h6 id="_da">DA</h6>
-<div class="sect6">
-<h7 id="_zbrush">Zbrush</h7>
+<h6 id="_zbrush">Zbrush</h6>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -1842,10 +1949,10 @@ see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef56241
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_students">Students</h4>
 <div class="sect4">
-<h5 id="_students">Students</h5>
-<div class="sect5">
-<h6 id="_all_students">All Students</h6>
+<h5 id="_all_students">All Students</h5>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -1860,8 +1967,8 @@ see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef56241
 </ul>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_music_prodrec_arts_students_only">Music Prod+Rec Arts Students Only</h6>
+<div class="sect4">
+<h5 id="_music_prodrec_arts_students_only">Music Prod+Rec Arts Students Only</h5>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -1870,8 +1977,8 @@ see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef56241
 </ul>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_designanimation_students_only">Design+Animation Students Only</h6>
+<div class="sect4">
+<h5 id="_designanimation_students_only">Design+Animation Students Only</h5>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -1885,8 +1992,10 @@ see: <a href="https://github.com/PWmercy/Mercy-Digital-Arts/tree/315cc36bef56241
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_tools">Tools</h3>
+</div>
+<div class="sect1">
+<h2 id="_tools">Tools</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>These are used for Managing Macs</p>
 </div>
@@ -1978,10 +2087,12 @@ Solution seems to be to go to /Volumes, delete the locked mount(s) and eject the
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_signing_packages">Signing packages</h3>
-<div class="sect4">
-<h5 id="_getting_started">Getting started</h5>
+</div>
+<div class="sect1">
+<h2 id="_signing_packages">Signing packages</h2>
+<div class="sectionbody">
+<div class="sect3">
+<h4 id="_getting_started">Getting started</h4>
 <div class="paragraph">
 <p>In order to sign macOS packages, you will need an appropriate certificate (such as a TLS/SSL certificate with signing usage) that is verifiable on the client. It is common to use a “Developer ID Installer” certificate for this purpose, obtained from an Apple Developer account, though third party certificates that meet these requirements are also acceptable. If you don’t have a certificate already and wish to use an Apple Developer account for this purpose, you can start the signup process on Apple’s website.</p>
 </div>
@@ -1995,8 +2106,8 @@ Solution seems to be to go to /Volumes, delete the locked mount(s) and eject the
 <p>Once you have your certificate, there are a few different ways to sign the macOS PKG.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_signing_pkgs_with_terminal_and_command_line">Signing PKGs with Terminal and Command Line</h5>
+<div class="sect3">
+<h4 id="_signing_pkgs_with_terminal_and_command_line">Signing PKGs with Terminal and Command Line</h4>
 <div class="paragraph">
 <p>For this example, we will use the <code>productsign</code> command.</p>
 </div>
@@ -2030,17 +2141,19 @@ productsign: Wrote signed product archive to /Users/sdeveloper/Downloads/munkito
 </ol>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_sign_profiles_and_other_objects">Sign profiles (and other objects)</h5>
+<div class="sect3">
+<h4 id="_sign_profiles_and_other_objects">Sign profiles (and other objects)</h4>
 <div class="paragraph">
 <p><code>/usr/bin/security cms -S -N "&lt;common name of certificate&gt;" -i &lt;input path to unsigned profile&gt; -o &lt;output path for signed profile&gt;</code></p>
 </div>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_apple_updates">Apple updates</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_apple_updates">Apple updates</h3>
-<div class="sect3">
-<h4 id="_loops_etc_for_garageband_and_logic">Loops, etc. for GarageBand and Logic</h4>
+<h3 id="_loops_etc_for_garageband_and_logic">Loops, etc. for GarageBand and Logic</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2075,8 +2188,10 @@ on Github</a></p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_synology">Synology</h3>
+</div>
+<div class="sect1">
+<h2 id="_synology">Synology</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -2085,14 +2200,18 @@ on Github</a></p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_volume_ownership">Volume Ownership</h3>
+</div>
+<div class="sect1">
+<h2 id="_volume_ownership">Volume Ownership</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><a href="https://derflounder.wordpress.com/2023/03/10/granting-volume-owner-status-on-apple-silicon-macs/">Rich Trouton article</a></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_loginbackground_items">Login/Background Items</h3>
+</div>
+<div class="sect1">
+<h2 id="_loginbackground_items">Login/Background Items</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -2111,10 +2230,7 @@ on Github</a></p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_managementreporting">Management/Reporting</h2>
-<div class="sectionbody">
+<h1 id="_managementreporting" class="sect0">Management/Reporting</h1>
 <div class="ulist">
 <ul>
 <li>
@@ -2163,8 +2279,9 @@ on Github)</p>
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="_desktop_central">Desktop Central</h3>
+<div class="sect1">
+<h2 id="_desktop_central">Desktop Central</h2>
+<div class="sectionbody">
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -2183,10 +2300,7 @@ time so should not conflict with MDM
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_many_serversmany_services">Many servers/many services</h2>
-<div class="sectionbody">
+<h1 id="_many_serversmany_services" class="sect0">Many servers/many services</h1>
 <div class="ulist">
 <ul>
 <li>
@@ -2234,11 +2348,7 @@ time so should not conflict with MDM
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_management_tools">Management tools</h2>
-<div class="sectionbody">
+<h1 id="_management_tools" class="sect0">Management tools</h1>
 <div class="ulist">
 <ul>
 <li>
@@ -2253,11 +2363,7 @@ time so should not conflict with MDM
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_admin_resources">Admin Resources</h2>
-<div class="sectionbody">
+<h1 id="_admin_resources" class="sect0">Admin Resources</h1>
 <div class="ulist">
 <ul>
 <li>
@@ -2311,8 +2417,6 @@ Both use <a href="mailto:asm@mercy.edu">asm@mercy.edu</a> account
 </ul>
 </div>
 </div>
-</div>
-</div>
 <div id="footnotes">
 <hr>
 <div class="footnote" id="_footnotedef_1">
@@ -2325,7 +2429,7 @@ Both use <a href="mailto:asm@mercy.edu">asm@mercy.edu</a> account
 <div id="footer">
 <div id="footer-text">
 Version 2.0<br>
-Last updated 2025-01-07 14:50:51 -0500
+Last updated 2025-01-24 11:26:22 -0500
 </div>
 </div>
 </body>
